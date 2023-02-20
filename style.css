@@ -33,6 +33,11 @@ footer {
   padding: 5px;
 }
 
+.xkcd-img {
+  display: block;
+  margin-top: 50px;
+}
+
 .footer-text {
   font-size: 17px;
 }
