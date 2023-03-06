@@ -1,0 +1,28 @@
+{
+  "name": "s23_fewd_1",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Nikita Pozdniakov (F23 FWD)",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitosing/S23_FEWD_1.git"
+  },
+  "author": "Nikita Pozdniakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikitosing/S23_FEWD_1/issues"
+  },
+  "homepage": "https://github.com/nikitosing/S23_FEWD_1#readme",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.18.0",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
