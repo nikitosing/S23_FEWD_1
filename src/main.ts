@@ -1,3 +1,8 @@
-import { fetchAndSetComic } from "./script"
+import './app.css'
+import App from './App.svelte'
 
-fetchAndSetComic()
+const app = new App({
+  target: document.getElementById('app'),
+})
+
+export default app

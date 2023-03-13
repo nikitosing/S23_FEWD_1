@@ -14,6 +14,13 @@ interface Comic {
   safe_title: string
 }
 
+export interface ComicProcessed {
+  img: Link, 
+  alt: string,
+  title: string,
+  dateString: string
+}
+
 async function fetchId(email : Email) : Promise<number> {
   const params : URLSearchParams = new URLSearchParams();
   if (email) {
@@ -32,21 +39,10 @@ async function fetchImg(id : number) : Promise<Comic> {
   return result.json()      
 }
 
-export async function fetchAndSetComic() : Promise<void> {
+export async function fetchComic() : Promise<ComicProcessed> {
   let id : number = await fetchId(email)
   let result : Comic = await fetchImg(id)
-  let img : HTMLImageElement = document.getElementById("xkcd") as HTMLImageElement
-
-  img.setAttribute('src', result.img)
-  img.setAttribute('alt', result.alt)
-
-  let h2 : HTMLHeadingElement = document.getElementById("xkcd-title") as HTMLHeadingElement
-  h2.innerText = result.safe_title
-
-  let a : HTMLAnchorElement = document.getElementById("xkcd-date") as HTMLAnchorElement
-  const event : Date = new Date(parseInt(result.year), parseInt(result.month) - 1, parseInt(result.day), 0, 0, 0)
-  a.innerText = event.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
-
-  let alt : HTMLAnchorElement = document.getElementById("xkcd-alt") as HTMLAnchorElement
-  alt.innerText = result.alt
+  let event : Date = new Date(parseInt(result.year), parseInt(result.month) - 1, parseInt(result.day), 0, 0, 0)
+  
+  return {img: result.img, alt: result.alt, title: result.safe_title, dateString: event.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} as ComicProcessed
 }

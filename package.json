@@ -1,28 +1,21 @@
 {
-  "name": "s23_fewd_1",
+  "name": "s23_fewd_svetle",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "version": "1.0.0",
-  "description": "Nikita Pozdniakov (F23 FWD)",
-  "main": "src/main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config rollup.config.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nikitosing/S23_FEWD_1.git"
-  },
-  "author": "Nikita Pozdniakov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nikitosing/S23_FEWD_1/issues"
-  },
-  "homepage": "https://github.com/nikitosing/S23_FEWD_1#readme",
   "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.0",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "rollup": "^3.18.0",
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "@tsconfig/svelte": "^3.0.0",
+    "svelte": "^3.55.1",
+    "svelte-check": "^2.10.3",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
   }
 }

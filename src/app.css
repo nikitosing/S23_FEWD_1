@@ -8,6 +8,7 @@
   font-size: 36px;
 	padding-top: 10px;
 	text-align: center;
+  margin: 0;
 }
 
 body {
@@ -40,6 +41,7 @@ footer {
 
 .footer-text {
   font-size: 17px;
+  margin-bottom: 0;
 }
 
 .info {
@@ -72,4 +74,8 @@ footer {
 
 .social-links a {
   text-decoration: none;
+}
+
+.experience-item {
+  display: inline;
 }
