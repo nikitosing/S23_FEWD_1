@@ -1,11 +1,11 @@
 <script lang="ts">
-  export let href : string = undefined
+  export let href : string = ""
   export let name : string
   export let start : string
   export let end : string
 </script>
 
-{#if href}
+{#if href !== ""}
   <li><a {href}>{name}</a>: {start} - {end}</li>
 {:else}
   <li><p class="experience-item">{name}</p>: {start} - {end}</li>

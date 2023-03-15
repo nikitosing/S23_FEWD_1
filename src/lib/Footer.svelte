@@ -1,8 +1,8 @@
 <script lang="ts">
   import Social from "./Social.svelte";
-  import githubLogo from '../assets/github.png'
-  import mailLogo from '../assets/mail.png'
-  import telegramLogo from '../assets/telegram.png'
+  import githubLogo from '../../assets/github.png'
+  import mailLogo from '../../assets/mail.png'
+  import telegramLogo from '../../assets/telegram.png'
 </script>
 
 <p class="footer-text">Nikita Pozdniakov. 3023</p>
