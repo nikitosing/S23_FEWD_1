@@ -1,8 +1,12 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <header class="site-header">
 	<p class="site-title">Nikita Pozdniakov</p>
 	<nav class="navbar">
-		<a class="navbar-link" href="/">About</a>
-		<a class="navbar-link" href="/comic">Comic</a>
+		<a class="navbar-link" href="{base}/">About</a>
+		<a class="navbar-link" href="{base}/comic">Comic</a>
 	</nav>
 </header>
 
